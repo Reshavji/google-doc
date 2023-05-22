@@ -11,6 +11,10 @@
   grid-template-columns: 80% 20%;
   margin-top: 20px;
 }
+#box-img{
+  height: 250px;
+  width: 250px;
+}
 #file-name{
   font-size: 20px;
   font-weight: 600;
