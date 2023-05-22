@@ -20,7 +20,24 @@ const App = () => {
   const handleEditorChange = (value) => {
     setContent(value);
   };
-
+  const handleSaveFile = () => {
+    if (fileName && content) {
+      // Remove HTML tags from content
+      const parser = new DOMParser();
+      const parsedContent = parser.parseFromString(content, 'text/html');
+      const plainTextContent = parsedContent.body.textContent;
+  
+      const element = document.createElement('a');
+      const file = new Blob([plainTextContent], { type: 'application/msword' });
+      element.href = URL.createObjectURL(file);
+      element.download = `${fileName}.doc`;
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    }
+  };
+  
+  
   return (
     <div className="App">
       <Toolbar fileName={fileName} />
@@ -38,7 +55,7 @@ const App = () => {
         ) : (
           <>
             <TextEditor value={content} onChange={handleEditorChange} />
-            <Sidebar />
+            <Sidebar onSave={handleSaveFile} />
           </>
         )}
       </div>

@@ -1,39 +1,11 @@
-/* App.css */
+/******************************************* App.css *******************************************/
 
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
-.MainContainer {
-  display: grid;
-  grid-template-columns: 80% 20%;
-  margin-top: 20px;
-}
-#box-img{
-  height: 250px;
-  width: 250px;
-}
-#file-name{
-  font-size: 20px;
-  font-weight: 600;
-}
-.sidebar {
-  background-color: #fbfbfb;
-  padding: 20px;
-  border-radius: 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.text-editor {
-  display: flex;
-  flex-direction: column;
-}
-
-.content-container {
-  flex-grow: 1;
-}
+/******************************************* Here Toolbar style  *******************************************/
 
 .toolbar {
   display: flex;
@@ -47,15 +19,20 @@
   z-index: 1;
 }
 
+/******************************************* Here Logo image style *******************************************/
 .logo {
   height: 30px;
   margin-right: 10px;
 }
-
+/******************************************* Here style for Document file name ************************************/
+#file-name{
+  font-size: 20px;
+  font-weight: 600;
+}
+/******************************************* Here style for Share Button *******************************************/
 .formatting-options {
   display: flex;
 }
-
 .share-option {
   background-color: #4285f4;
   color: #fff;
@@ -64,13 +41,13 @@
   border-radius: 4px;
   cursor: pointer;
 }
-
-.editor {
-  height: 82vh;
-  border-radius: 4px;
-  padding: 10px;
+/******************************************* Here style for Main Grid System *******************************************/
+.MainContainer {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  margin-top: 20px;
 }
-
+/******************************************* Here style for Asking file name *******************************************/
 .input-container {
   position: absolute;
   top: 50%;
@@ -104,3 +81,70 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+/******************************************* Here style for Text Editor *******************************************/
+.text-editor {
+  display: flex;
+  flex-direction: column;
+  
+}
+.content-container {
+  flex-grow: 1;
+
+}
+.editor {
+  height: 82vh;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+/******************************************* Here style for Slidbar *******************************************/
+
+.sidebar {
+  background-color: #fbfbfb;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  border-radius: 50px;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.sidebar-links {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 10;
+}
+
+.sidebar-links li {
+  margin-bottom: 20px;
+}
+
+.sidebar-links li a {
+  display: inline;
+  padding: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #6384ee;
+  border-radius: 4px;
+}
+
+.sidebar-links li a:hover {
+  background-color: #0733b8;
+}
+
+/******************************************* Here style for Slidbar Save Button *******************************************/
+
+#save-button{
+ background-color: crimson;
+ border:none;
+ color:white;
+ padding: 8px 60px;
+ margin-top: 100%;
+justify-content: center;
+}
+#save-button:hover{
+  background-color: rgb(31, 8, 33);
+}
+
+/******************************************* App.css End ******************************************/
