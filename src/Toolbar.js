@@ -12,7 +12,7 @@ const Toolbar = ({ fileName }) => {
       <span id='file-name'>{ fileName }</span>
       <div className="formatting-options">
         <button className="share-option">Share</button>
-      <span><img id='avatar' src='https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-No-Background.png' /></span>
+      <span><img id='avatar' src='https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-No-Background.png' alt='User'/></span>
       </div>
     </div>
   );

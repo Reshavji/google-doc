@@ -12,11 +12,14 @@ const App = () => {
   const handleFileNameChange = (event) => {
     setFileName(event.target.value);
   };
-
   const handleStartEditing = () => {
+    if (!fileName) {
+      alert('Please enter a file name');
+      return;
+    }
     setEditingStarted(true);
   };
-
+  
   const handleEditorChange = (value) => {
     setContent(value);
   };
@@ -50,7 +53,7 @@ const App = () => {
               onChange={handleFileNameChange}
               placeholder="Enter a file name"
             />
-            <button onClick={handleStartEditing}>Start Editing</button>
+            <button onClick={handleStartEditing} disabled={!fileName}>Start Editing</button>
           </div>
         ) : (
           <>
