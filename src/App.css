@@ -35,13 +35,21 @@
 .formatting-options {
   display: flex;
 }
+#avatar{
+  height: 305x;
+  width: 35px;
+  margin-left: 10px;
+}
 .share-option {
   background-color: #4285f4;
   color: #fff;
   border: none;
-  padding: 8px 12px;
+  padding: 8px 20px;
   border-radius: 4px;
   cursor: pointer;
+}
+.share-option:hover{
+ background-color: #4229e2;
 }
 /******************************************* Here style for Main Grid System *******************************************/
 .MainContainer {
